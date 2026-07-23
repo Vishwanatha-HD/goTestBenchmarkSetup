@@ -122,8 +122,8 @@ echo "STEP 1: CHECKOUT LATEST GO MASTER"
 echo "=========================================================="
 
 if [ ! -d "$GO_DIR" ]; then
-    mkdir -p "$GO_DIR"
-    echo "go directory created: $GO_DIR"
+    git clone https://go.googlesource.com/go --recursive
+    echo "Clone the go repo..."
 else
     echo "go directory already exists: $GO_DIR"
 fi
